@@ -51,7 +51,10 @@ int update(const std::string& filename, int row, int col) {
 	const char * text2 = doc.allocate_string(cls.c_str(), cls.length());
 
 	cout << "Assigning the new values to the nodes..." << endl;
-	
+
+	root_node->first_node("row")->value(rws.c_str());
+	root_node->first_node("col")->value(cls.c_str());
+
 	//
 	//std::string data;
 	//rapidxml::print(std::back_inserter(data), doc);
